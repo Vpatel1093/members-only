@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
-  root 'members-only#home'
-
+  #root 'posts#index'
 
   get '/login',     to: 'sessions#new'
   post '/login',    to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
+
+  #resources :posts, only: [:index,:create]
 end

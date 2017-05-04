@@ -1,10 +1,10 @@
 <header class="navbar">
   <div class="container">
-    <%= link_to "Members Only", root_path %>
+    <%#= link_to "Members Only", root_path %>
     <nav>
       <ul class="nav">
         <% if logged_in? %>
-          <%= link_to "Log out", logout_path, method: :delete %>
+          <% link_to "Log out", logout_path, method: :delete %>
         <% else %>
           <li><%= link_to "Log In", login_path %></li>
         <% end %>
