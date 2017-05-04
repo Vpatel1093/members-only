@@ -2,10 +2,10 @@
 
 <%= form_for(:session, url: login_path) do |f| %>
   <%= f.label :email %>
-  <%= f.email_field :email %><br>
+  <%= f.email_field :email, value: 'user1@example.com' %><br>
 
   <%= f.label :password %>
-  <%= f.password_field :password %>
+  <%= f.password_field :password, value: 'foobar' %>
 
   <%= f.submit "Log In" %>
 <% end %>

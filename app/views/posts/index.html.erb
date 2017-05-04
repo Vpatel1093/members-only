@@ -1,0 +1,9 @@
+<br>
+<% @posts.each do |post| %>
+  <%= content_tag(:p, post.body) %>
+  <% if logged_in? %>
+    <%= content_tag(:p, '') do %>
+      <%= "#{distance_of_time_in_words(post.created_at, Time.zone.now)} ago by #{post.user.name}" %>
+    <% end %><br>
+  <% end %>
+<% end %>
